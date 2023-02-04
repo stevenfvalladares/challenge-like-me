@@ -31,17 +31,17 @@ app.get("/posts", async (req, res) => {
 
 app.post("/posts", async (req, res) => {
   try {
-    const { titulo, imageUrl, descripcion, likes } = req.body;
-    await addPosts(titulo, imageUrl, descripcion, likes);
+    const { titulo, url, descripcion, likes } = req.body;
+    await addPosts(titulo, url, descripcion, likes);
     res.send("Post added successfully");
   } catch (error) {
     res.status(500).send(error);
   }
 });
 
-app.put("/posts/likes/:id", async (req, res) => {
-  const { id } = req.params;
+app.put("/posts/like/:id", async (req, res) => {
   try {
+    const { id } = req.params;
     await addLikes(id);
     res.status(200).json({
       message: "Like added successfully",
