@@ -1,10 +1,12 @@
 const { Pool } = require("pg");
 
+require("dotenv").config({ path: "./.env" });
+
 const pool = new Pool({
-  host: "localhost",
-  user: "steven",
-  password: "22038367",
-  database: "likeme",
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
   allowExitOnIdle: true,
 });
 
