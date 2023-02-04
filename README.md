@@ -9,5 +9,5 @@ Script de instrucciones SQL
 *   Paso 2: crear una tabla llamada "posts" con las siguientes columnas:  
     
     ```
-    $ CREATE TABLE posts (id SERIAL, titulo VARCHAR(25), img VARCHAR(1000), descripcion VARCHAR(255), likes INT);
+    $ CREATE TABLE posts (id SERIAL, titulo VARCHAR(25), img VARCHAR(1000), description VARCHAR(255), likes INT);
     ```
