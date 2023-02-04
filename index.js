@@ -24,3 +24,9 @@ app.get("/posts", async (req, res) => {
   }));
   res.json(data);
 });
+
+app.post("/posts", async (req, res) => {
+  const { titulo, imageUrl, descripcion, likes } = req.body;
+  await addPosts(titulo, imageUrl, descripcion, likes);
+  res.send("Post added successfully");
+});
